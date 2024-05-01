@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Exemplos em JavaScript</title>
+<title>JavaScript</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -52,25 +52,20 @@
     <div class="container">
         <h1>Exemplos em JavaScript</h1>
 
-        <!-- Popup para exibir mensagem -->
         <div id="popup">
             <p id="mensagemPopup"></p>
             <button onclick="fecharPopup()">Fechar</button>
         </div>
 
-        <!-- Elemento alterado por ID -->
         <div id="elementoId">Texto inicial por ID</div>
         <button onclick="alterarPorId()">Alterar por ID</button><br>
 
-        <!-- Elemento alterado por Name -->
         <div name="elementoName">Texto inicial por Name</div>
         <button onclick="alterarPorName()">Alterar por Name</button><br>
 
-        <!-- Elemento alterado por Class -->
         <div class="elementoClass">Texto inicial por Class</div>
         <button onclick="alterarPorClass()">Alterar por Class</button><br>
 
-        <!-- Formulário para calcular a soma -->
         <form id="formSoma">
             <label for="numero1">Número 1:</label>
             <input type="number" id="numero1" name="numero1" required><br>
@@ -79,20 +74,16 @@
             <button type="submit">Calcular Soma</button>
         </form>
         
-        <!-- Div para exibir o resultado da soma -->
         <div id="resultadoSoma"></div>
     </div>
 
     <script>
-        // Função para fechar o popup
         function fecharPopup() {
             document.getElementById('popup').style.display = 'none';
         }
 
-        // (1) Mensagem em popup
         alert('Olá Mundo');
 
-        // (2) Soma de 2 inteiros
         document.getElementById('formSoma').addEventListener('submit', function(event) {
             event.preventDefault(); // Evita o envio do formulário
             let numero1 = parseInt(document.getElementById('numero1').value);
@@ -101,7 +92,6 @@
             document.getElementById('resultadoSoma').textContent = 'A soma de ' + numero1 + ' e ' + numero2 + ' é ' + soma;
         });
 
-        // (3) Altera a propriedade de um elemento por id
         function alterarPorId() {
             let elemento = document.getElementById('elementoId');
             elemento.textContent = 'Texto alterado por ID';
@@ -109,7 +99,6 @@
             document.getElementById('popup').style.display = 'block';
         }
 
-        // (4) Altere a propriedade de um elemento por name
         function alterarPorName() {
             let elementos = document.getElementsByName('elementoName');
             for (let i = 0; i < elementos.length; i++) {
@@ -119,7 +108,6 @@
             document.getElementById('popup').style.display = 'block';
         }
 
-        // (5) Altere a propriedade de um elemento por class
         function alterarPorClass() {
             let elementos = document.getElementsByClassName('elementoClass');
             for (let i = 0; i < elementos.length; i++) {
